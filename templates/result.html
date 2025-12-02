@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="results-page">
+    <div class="container">
+        <h2 class="main-heading"><i class="fas fa-check-circle"></i> Model Trained Successfully</h2>
+        <div class="stats">
+            <div class="stat-item">
+                <i class="fas fa-users"></i>
+                <span>Total Students: <span class="highlight">{{ total }}</span></span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Model Accuracy: <span class="highlight accuracy">{{ accuracy }}%</span></span>
+            </div>
+        </div>
+        <a href="/predict/" class="nav-btn"><i class="fas fa-arrow-right"></i> Predict New Student</a>
+        <a href="/" class="nav-btn back-btn"><i class="fas fa-arrow-left"></i> Go Back</a>
+    </div>
+</body>
+</html>
